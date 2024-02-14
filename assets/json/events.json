@@ -1,0 +1,12 @@
+{
+    "event1": {
+        "StartTime": 0,
+        "EndTime": 1,
+        "Name": "Lorem",
+        "Description": "Lorem Ipsum Dolor sit Amet",
+        "Images": {
+            "1": "image1.jpg",
+            "2": "image2.png"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+
+.navbar {
+    position: sticky;
+    top: 0;
+
+    padding-inline: var(--spacing-inline);
+    box-shadow: $seperator;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5em;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    .brand {
+        font-size: $h3;
+    }
+
+    .links {
+        display: flex;
+        gap: 1em;
+        
+        font-size: $h5;
+    }
+}

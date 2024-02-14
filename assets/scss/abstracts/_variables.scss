@@ -1,0 +1,17 @@
+$seperator: 0 0 0 2px hsl(0 0% 50% / .5);
+
+:root {
+    --spacing-inline: 5em;
+
+    @media (max-width: 800px) {
+        --spacing-inline: 2em;
+    }
+
+    @media (max-width: 600px) {
+        --spacing-inline: 1.5em;
+    }
+
+    @media (max-width: 400px) {
+        --spacing-inline: .5em;
+    }
+}
