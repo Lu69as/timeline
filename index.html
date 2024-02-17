@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
@@ -15,25 +15,75 @@
     <div id="app">
         <header class="navbar">
             <div class="brand">
-                <a href="/">Tidslinje</a>
+                <a href="./">Tidslinje</a>
             </div>
             <nav class="links">
-                <a href="/">Home</a>
-                <a href="/">About</a>
-                <a href="/">What</a>
+                <a href="./">Home</a>
+                <a href="./about/">About</a>
+                <a href="./what">What</a>
             </nav>
         </header>
 
         <main id="main">
             <h1>Tidslinje</h1>
+
+            <div class="timeline">
+                <div class="container">
+                    <div class="event" data-event="event1">
+                        <div class="marker"></div>
+                        <div class="content">
+                            <p>event1</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam ad non laboriosam
+                                soluta blanditiis facere beatae eaque libero maiores. Non, veritatis? A eveniet tempora
+                                minima est, consequuntur incidunt magnam.</p>
+                        </div>
+                    </div>
+                    <div class="event" data-event="event2">
+                        <div class="marker"></div>
+                        <div class="content">
+                            <p>event2</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam ad non laboriosam
+                                soluta blanditiis facere beatae eaque libero maiores. Non, veritatis? A eveniet tempora
+                                minima est, consequuntur incidunt magnam.</p>
+                        </div>
+                    </div>
+                    <div class="event" data-event="event3">
+                        <div class="marker"></div>
+                        <div class="content">
+                            <p>event3</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam ad non laboriosam
+                                soluta blanditiis facere beatae eaque libero maiores. Non, veritatis? A eveniet tempora
+                                minima est, consequuntur incidunt magnam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eventViewer">
+
+            </div>
+
         </main>
     </div>
 
     <footer class="footer">
         <div class="container">
-            <p class="credit">Laget av <a href="https://github.com/kimlukasmyrvold" target="_blank">Kim Lukas
-                    Myrvold</a>, <a href="https://github.com/Lu69as" target="_blank">Lukas Okkenhaug</a> og <a
-                    href="https://github.com/Lukaso6" target="_blank">Lukas Oliver Oliversen</a>.</p>
+            <p class="title">Samisk Tidslinje</p>
+
+            <p>Koden bak nettsiden:
+                <a href="https://github.com/kimlukasmyrvold/timeline" target="_blank">
+                    https://github.com/kimlukasmyrvold/timeline
+                </a>
+            </p>
+            
+            <hr>
+
+            <p class="credit">
+                Laget av
+                <a href="https://github.com/kimlukasmyrvold" target="_blank">Kim Lukas Myrvold</a>,
+                <a href="https://github.com/Lu69as" target="_blank">Lukas Okkenhaug</a> og
+                <a href="https://github.com/Lukaso6" target="_blank">Lukas Oliver Oliversen</a>.
+            </p>
 
             <p class="copyright">Copyright &copy; <span class="time">2024</span></p>
         </div>

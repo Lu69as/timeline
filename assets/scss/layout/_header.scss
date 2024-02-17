@@ -3,10 +3,13 @@
 
 .navbar {
     position: sticky;
+    z-index: 999;
     top: 0;
 
     padding-inline: var(--spacing-inline);
-    box-shadow: $seperator;
+    background-color: hsl(var(--bgRaw) / .5);
+    backdrop-filter: blur(50px);
+    box-shadow: $bs-seperator;
 
     display: flex;
     align-items: center;
@@ -23,7 +26,10 @@
     .links {
         display: flex;
         gap: 1em;
-        
         font-size: $h5;
+    }
+
+    a {
+        text-decoration: none;
     }
 }

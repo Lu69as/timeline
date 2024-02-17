@@ -1,6 +1,9 @@
+@use "../abstracts/" as *;
 @use "typography" as *;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -9,7 +12,8 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
     background-color: var(--bg);
     color: var(--text);
 
@@ -18,17 +22,29 @@ html, body {
     margin: 0;
 }
 
-#app {
+body {
+    display: flex;
+    flex-direction: column;
     min-height: 100dvh;
+
+    #app {
+        flex: 1;
+    }
 }
 
 
-
 a {
-    text-decoration: none;
+    // text-decoration: none;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px;
     color: var(--text);
 
     &:hover {
         opacity: .65;
     }
+}
+
+hr {
+    margin-block: 2.5em;
+    color: $seperator;
 }

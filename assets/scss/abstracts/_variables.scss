@@ -1,4 +1,5 @@
-$seperator: 0 0 0 2px hsl(0 0% 50% / .5);
+$seperator: hsl(0 0% 50% / .5);
+$bs-seperator: 0 0 0 1px $seperator;
 
 :root {
     --spacing-inline: 5em;

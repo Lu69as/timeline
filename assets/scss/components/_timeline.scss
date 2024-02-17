@@ -1,0 +1,73 @@
+@use "../abstracts/" as *;
+@use "../theme/" as *;
+
+.timeline {
+    $_gap: 1.5em;
+    $_color: var(--text);
+
+    display: flex;
+    flex-direction: column;
+    gap: calc($_gap / 1);
+    position: relative;
+
+    padding-block: $_gap;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        left: calc($_gap / 2);
+
+        background-color: $_color;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: $_gap;
+    }
+    
+    .event {
+        display: flex;
+
+        .marker {
+            height: 2px;
+            margin-left: calc($_gap / 2);
+            width: calc($_gap * 2);
+            background-color: $_color;
+
+            position: relative;
+
+            // Dot
+            &::before {
+                $_offset: -3px;
+
+                content: '';
+                position: absolute;
+                background-color: $_color;
+
+                width: 8px;
+                aspect-ratio: 1;
+
+                top: $_offset;
+                left: $_offset;
+                border-radius: 10px;
+            }
+        }
+
+        .content {
+            border: 2px solid $_color;
+
+            border-radius: 5px;
+            border-top-left-radius: 0;
+            // border-bottom-right-radius: 10px;
+
+            padding: 0 $_gap;
+            width: 500px;
+
+            background-color: var(--bg);
+        }
+    }
+}
