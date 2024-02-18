@@ -78,10 +78,10 @@ function updateEventViewer(data) {
 
     const eventViewer = document.querySelector("#eventViewer");
 
-    const title = eventViewer.querySelector(".title");
-    const time = eventViewer.querySelector(".time");
-    const description = eventViewer.querySelector(".description");
-    const images = eventViewer.querySelector(".images");
+    const title = eventViewer.querySelector(".eventViewer__container__hero__title");
+    const time = eventViewer.querySelector(".eventViewer__container__hero__time");
+    const description = eventViewer.querySelector(".eventViewer__container__content__description");
+    const images = eventViewer.querySelector(".eventViewer__container__content__images");
 
     title.textContent = data.Name;
     time.textContent = `${data.StartTime} - ${data.EndTime}`;
@@ -111,7 +111,7 @@ function addImagesToEventViewer(container, data) {
         checkImageExists(imageUrl, (exists) => {
             if (exists) {
                 const imgContainer = document.createElement("div");
-                imgContainer.classList.add("image");
+                imgContainer.classList.add("eventViewer__container__content__images__image");
 
                 const img = document.createElement("img");
                 img.src = imageUrl;

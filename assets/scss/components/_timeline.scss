@@ -5,13 +5,21 @@
 
 .timeline {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
 
-    // .container .middle:nth-child(2) {
-    //     background-color: red !important; 
-    //     height: 50%;
-    // }
+    .tipbox {
+        display: flex;
+        justify-content: center;
+        margin-inline: 1.5em;
 
+        .content {
+            border-radius: 10px;
+            border: 1px solid var(--text5);
+            padding: .5em 1.5em;
+        }
+    }
 
     @media screen and (width >=750px) {
         .container {

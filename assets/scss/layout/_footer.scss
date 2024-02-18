@@ -13,8 +13,13 @@
         transition: padding .3s ease;
 
         .title {
-            margin: 0 0 1.5em;
+            margin: 0 0 1em;
             font-size: $h4;
+        }
+
+        .description {
+            max-width: 70ch;
+            margin-bottom: 1.5em;
         }
 
         .copyright {

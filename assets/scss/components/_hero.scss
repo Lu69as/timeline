@@ -1,8 +1,9 @@
+@use "../abstracts/" as *;
 @use "../base/" as *;
 
 .hero {
     .title {
-        font-size: $h4;
+        font-size: $h3;
         margin: 0;
     }
 }
