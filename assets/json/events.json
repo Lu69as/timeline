@@ -1,22 +1,41 @@
 {
-    "event1": {
-        "StartTime": 0,
-        "EndTime": 1,
-        "Name": "Lorem",
-        "Description": "Lorem Ipsum Dolor sit Amet",
+    "1": {
+        "StartTime": 1850,
+        "EndTime": 1870,
+        "Name": "Overgangsfasen",
+        "Description": "1851 ble Finnefondet etablert i stortinget for og finansielt støtte fornorskningen av samene.",
         "Images": {
-            "1": "image1.jpg",
-            "2": "image2.jpeg"
+            "1": "th-4234224032.jpg",
+            "2": "torvhandel-sandefjord-lardex-06_20190313_1232154377-2175571461.jpeg"
         }
     },
-    "event2": {
-        "StartTime": 1920,
-        "EndTime": 2021,
-        "Name": "Dolor",
-        "Description": "Lorem Ipsum Dolor sit Amet",
+    "2": {
+        "StartTime": 1850,
+        "EndTime": 1870,
+        "Name": "Overgangsfasen",
+        "Description": "1852 Grensen mellom Norge og Finland stenges for reindrift.",
         "Images": {
-            "1": "image1.jpg",
-            "2": "image2.png"
+            "1": "dbe18bf1-50cc-436d-9d23-8709fd343d1a.jpg"
+        }
+    },
+    "3": {
+        "StartTime": 1850,
+        "EndTime": 1870,
+        "Name": "Overgangsfasen",
+        "Description": "1862 strammet skoleloven inn muligheten til samisk på skolen.",
+        "Images": {
+            "1": "sp4b1d79-2061515713.jpg",
+            "2": "standard-sp4b1d75-1829978226.jpg",
+            "3": "th-2003774666.jpg"
+        }
+    },
+    "4": {
+        "StartTime": 1850,
+        "EndTime": 1870,
+        "Name": "Overgangsfasen",
+        "Description": "1868 ble kvener også inkludert i Finnefondets formål om fornorskning.",
+        "Images": {
+            "1": "samisk-migration-1338673512.png"
         }
     }
 }
