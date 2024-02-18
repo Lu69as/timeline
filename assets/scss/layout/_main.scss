@@ -1,4 +1,31 @@
-#main {
-    flex: 1;
-    margin-inline: var(--spacing-inline);
+.wrapper {
+    padding: 1.5em var(--spacing-inline);
+    transition: padding .3s ease;
+
+    &.secondary {
+        background-color: var(--secondary);
+    }
+
+    &.noblock {
+        padding-block: 0;
+    }
+
+    &.noinline {
+        padding-inline: 0;
+    }
+}
+
+
+.seperator {
+    svg {
+        width: 100%;
+    }
+
+    &.secondary svg {
+        color: var(--secondary);
+    }
+
+    &.upside {
+        rotate: 180deg;
+    }
 }

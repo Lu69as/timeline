@@ -6,6 +6,16 @@
         "Description": "Lorem Ipsum Dolor sit Amet",
         "Images": {
             "1": "image1.jpg",
+            "2": "image2.jpeg"
+        }
+    },
+    "event2": {
+        "StartTime": 1920,
+        "EndTime": 2021,
+        "Name": "Dolor",
+        "Description": "Lorem Ipsum Dolor sit Amet",
+        "Images": {
+            "1": "image1.jpg",
             "2": "image2.png"
         }
     }

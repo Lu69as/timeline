@@ -1,73 +1,93 @@
 @use "../abstracts/" as *;
+@use "../base/" as *;
 @use "../theme/" as *;
 
+
 .timeline {
-    $_gap: 1.5em;
-    $_color: var(--text);
-
     display: flex;
-    flex-direction: column;
-    gap: calc($_gap / 1);
-    position: relative;
+    justify-content: center;
 
-    padding-block: $_gap;
+    @media screen and (width >=750px) {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3px 1fr;
+            max-width: 900px;
+        }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        left: calc($_gap / 2);
-
-        background-color: $_color;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        gap: $_gap;
-    }
-    
-    .event {
-        display: flex;
-
-        .marker {
-            height: 2px;
-            margin-left: calc($_gap / 2);
-            width: calc($_gap * 2);
-            background-color: $_color;
-
+        .middle {
+            width: 3px;
+            height: 100%;
+            background-color: var(--secondary);
             position: relative;
 
-            // Dot
+            &.top,
+            &.bottom {
+                height: 50%;
+
+                &::before {
+                    top: unset;
+                }
+            }
+
+            &.top {
+                align-self: flex-end;
+            }
+
+            &.bottom {
+                rotate: 180deg;
+            }
+
             &::before {
-                $_offset: -3px;
+                $_size: 15px;
 
                 content: '';
                 position: absolute;
-                background-color: $_color;
 
-                width: 8px;
+                left: -#{calc(($_size / 2) - (3px / 2))};
+                top: calc(50% - ($_size / 2));
+
+                width: $_size;
                 aspect-ratio: 1;
 
-                top: $_offset;
-                left: $_offset;
-                border-radius: 10px;
+                border-radius: calc($_size) * 10;
+                background-color: inherit;
+            }
+        }
+    }
+
+    .event {
+        display: flex;
+        flex-direction: column;
+
+        padding: .5em 1em;
+        margin: 0 1.5em 1em;
+
+        background-color: var(--text5);
+        border-radius: 10px;
+        cursor: pointer;
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: .5em;
+            flex-wrap: wrap;
+
+            margin-bottom: .5em;
+
+            .title,
+            .time {
+                margin: 0;
+            }
+
+            .title {
+                font-size: $h5;
+            }
+
+            .time {
+                opacity: .7;
             }
         }
 
-        .content {
-            border: 2px solid $_color;
-
-            border-radius: 5px;
-            border-top-left-radius: 0;
-            // border-bottom-right-radius: 10px;
-
-            padding: 0 $_gap;
-            width: 500px;
-
-            background-color: var(--bg);
-        }
     }
 }

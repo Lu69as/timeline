@@ -1,0 +1,29 @@
+#scrollToTop {
+    $_offset: 1em;
+
+    position: fixed;
+    bottom: $_offset;
+    right: $_offset;
+
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+
+    translate: 0 200%;
+    transition: translate .3s ease;
+
+    &.active {
+        translate: 0%;
+    }
+
+
+    button {
+        height: 100%;
+        border-radius: inherit;
+        padding: .6em;
+    }
+
+    svg {
+        width: 100%;
+    }
+}

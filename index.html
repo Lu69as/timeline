@@ -17,65 +17,123 @@
             <div class="brand">
                 <a href="./">Tidslinje</a>
             </div>
-            <nav class="links">
-                <a href="./">Home</a>
-                <a href="./about/">About</a>
-                <a href="./what">What</a>
-            </nav>
+            <nav class="links"></nav>
         </header>
 
         <main id="main">
-            <h1>Tidslinje</h1>
 
-            <div class="timeline">
+            <div class="hero wrapper">
+                <p class="title">Tidslinje</p>
+                <p>Trykk på kortene under for å se mer info om hendelsen.</p>
+            </div>
+
+            <div class="timeline wrapper noinline">
                 <div class="container">
+                    <!-- Row 1 -->
+                    <div class="empty"></div>
+                    <div class="middle top"></div>
                     <div class="event" data-event="event1">
-                        <div class="marker"></div>
-                        <div class="content">
-                            <p>event1</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam ad non laboriosam
-                                soluta blanditiis facere beatae eaque libero maiores. Non, veritatis? A eveniet tempora
-                                minima est, consequuntur incidunt magnam.</p>
+                        <div class="hero">
+                            <p class="title">event1</p>
+                            <p class="time">1920 - 2021</p>
                         </div>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quisquam
+                            optio quas laboriosam sint mollitia illum itaque doloribus iure dolores.</p>
                     </div>
+
+                    <!-- Row 2 -->
                     <div class="event" data-event="event2">
-                        <div class="marker"></div>
-                        <div class="content">
-                            <p>event2</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam ad non laboriosam
-                                soluta blanditiis facere beatae eaque libero maiores. Non, veritatis? A eveniet tempora
-                                minima est, consequuntur incidunt magnam.</p>
+                        <div class="hero">
+                            <p class="title">event2</p>
+                            <p class="time">1920 - 2021</p>
                         </div>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quisquam
+                            optio quas laboriosam sint mollitia illum itaque doloribus iure dolores.</p>
                     </div>
+                    <div class="middle"></div>
+                    <div class="empty"></div>
+
+                    <!-- Row 3 -->
+                    <div class="empty"></div>
+                    <div class="middle bottom"></div>
                     <div class="event" data-event="event3">
-                        <div class="marker"></div>
-                        <div class="content">
-                            <p>event3</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam ad non laboriosam
-                                soluta blanditiis facere beatae eaque libero maiores. Non, veritatis? A eveniet tempora
-                                minima est, consequuntur incidunt magnam.</p>
+                        <div class="hero">
+                            <p class="title">event3</p>
+                            <p class="time">1920 - 2021</p>
                         </div>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quisquam
+                            optio quas laboriosam sint mollitia illum itaque doloribus iure dolores.</p>
                     </div>
+
                 </div>
             </div>
 
-            <div class="eventViewer">
+            <div class="seperator secondary">
+                <svg viewBox="0 0 960 100" width="960" height="100" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M0 49L14.5 47C29 45 58 41 87.2 41.8C116.3 42.7 145.7 48.3 174.8 52.7C204 57 233 60 262 59.3C291 58.7 320 54.3 349 51.7C378 49 407 48 436.2 48.5C465.3 49 494.7 51 523.8 49C553 47 582 41 611 42.7C640 44.3 669 53.7 698 58.3C727 63 756 63 785.2 62C814.3 61 843.7 59 872.8 57.5C902 56 931 55 945.5 54.5L960 54L960 101L945.5 101C931 101 902 101 872.8 101C843.7 101 814.3 101 785.2 101C756 101 727 101 698 101C669 101 640 101 611 101C582 101 553 101 523.8 101C494.7 101 465.3 101 436.2 101C407 101 378 101 349 101C320 101 291 101 262 101C233 101 204 101 174.8 101C145.7 101 116.3 101 87.2 101C58 101 29 101 14.5 101L0 101Z"
+                        fill="currentColor" stroke-linecap="round" stroke-linejoin="miter" />
+                </svg>
+            </div>
 
+            <div id="eventViewer" class="wrapper secondary">
+                <div class="container">
+
+                    <div class="hero">
+                        <p class="title">Event1</p>
+                        <p class="time">1920 - 2021</p>
+                    </div>
+
+                    <div class="content">
+                        <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus molestiae
+                            qui nam nobis. Repellat beatae at dolores. Minus, nisi laboriosam cumque, dolorem laudantium
+                            maxime sit quasi molestias dolorum placeat consequuntur suscipit temporibus! Saepe
+                            voluptatum
+                            non quos totam. Blanditiis officiis consequuntur, totam illo nam numquam nulla molestias
+                            omnis
+                            rerum libero sint?
+                        </p>
+
+                        <div class="images">
+                            <div class="image">
+                                <img src="https://picsum.photos/500/250?random=1" alt="random image">
+                            </div>
+                            <div class="image">
+                                <img src="https://picsum.photos/500/250?random=2" alt="random image">
+                            </div>
+                            <div class="image">
+                                <img src="https://picsum.photos/500/250?random=3" alt="random image">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="seperator secondary upside">
+                <svg viewBox="0 0 960 100" width="960" height="100" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M0 49L14.5 47C29 45 58 41 87.2 41.8C116.3 42.7 145.7 48.3 174.8 52.7C204 57 233 60 262 59.3C291 58.7 320 54.3 349 51.7C378 49 407 48 436.2 48.5C465.3 49 494.7 51 523.8 49C553 47 582 41 611 42.7C640 44.3 669 53.7 698 58.3C727 63 756 63 785.2 62C814.3 61 843.7 59 872.8 57.5C902 56 931 55 945.5 54.5L960 54L960 101L945.5 101C931 101 902 101 872.8 101C843.7 101 814.3 101 785.2 101C756 101 727 101 698 101C669 101 640 101 611 101C582 101 553 101 523.8 101C494.7 101 465.3 101 436.2 101C407 101 378 101 349 101C320 101 291 101 262 101C233 101 204 101 174.8 101C145.7 101 116.3 101 87.2 101C58 101 29 101 14.5 101L0 101Z"
+                        fill="currentColor" stroke-linecap="round" stroke-linejoin="miter" />
+                </svg>
             </div>
 
         </main>
     </div>
 
-    <footer class="footer">
+    <footer id="footer">
         <div class="container">
             <p class="title">Samisk Tidslinje</p>
 
-            <p>Koden bak nettsiden:
-                <a href="https://github.com/kimlukasmyrvold/timeline" target="_blank">
-                    https://github.com/kimlukasmyrvold/timeline
-                </a>
+            <p>
+                Koden bak nettsiden:
+                <a href="https://github.com/kimlukasmyrvold/timeline" target="_blank">GitHub</a>
             </p>
-            
+
             <hr>
 
             <p class="credit">
@@ -88,6 +146,17 @@
             <p class="copyright">Copyright &copy; <span class="time">2024</span></p>
         </div>
     </footer>
+
+    <div id="scrollToTop">
+        <button class="button scrollToTop">
+            <?xml version="1.0" encoding="utf-8"?>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z"
+                    fill="currentColor" />
+            </svg>
+        </button>
+    </div>
 </body>
 
 </html>
