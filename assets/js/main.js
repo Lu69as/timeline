@@ -16,11 +16,9 @@ function getJSON(path = "", functionCall) {
 
 
 function addEvents(data) {
-    updateEventViewer(data.event1);
     const timeline = document.querySelector(".timeline");
-    let eventCount = timeline.querySelectorAll(".event").length;
-    console.log(eventCount);
     const container = timeline.querySelector(".container");
+    let eventCount = timeline.querySelectorAll(".event").length;
 
     for (const key in data) {
         const empty = document.createElement("div");
@@ -31,9 +29,11 @@ function addEvents(data) {
 
         const event = document.createElement("div");
         event.classList.add("event");
+        event.dataset.event = key;
         event.addEventListener("click", (e) => {
             e.preventDefault();
             scrollTo(document.querySelector("#eventViewer"));
+            updateEventViewer(data[e.target.dataset.event]);
         });
 
 
@@ -67,8 +67,7 @@ function addEvents(data) {
         else container.append(event, middle, empty);
     }
 
-    console.log(eventCount);
-
+    updateEventViewer(data[Object.keys(data)[0]]);
 }
 
 function updateEventViewer(data) {
@@ -104,8 +103,10 @@ function checkImageExists(url, callback) {
 }
 
 function addImagesToEventViewer(container, data) {
+    container.innerHTML = "";
+    
     for (const key in data) {
-        const imageUrl = `./assets/images/${data[key]}`;
+        const imageUrl = `./assets/images/sami/${data[key]}`;
 
         checkImageExists(imageUrl, (exists) => {
             if (exists) {
