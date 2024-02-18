@@ -94,5 +94,10 @@
             }
         }
 
+        .hero,
+        .description {
+            pointer-events: none;
+        }
+
     }
 }
