@@ -16,7 +16,59 @@ function getJSON(path = "", functionCall) {
 
 
 function addEvents(data) {
-    updateEventViewer(data.event1)
+    updateEventViewer(data.event1);
+    const timeline = document.querySelector(".timeline");
+    let eventCount = timeline.querySelectorAll(".event").length;
+    console.log(eventCount);
+    const container = timeline.querySelector(".container");
+
+    for (const key in data) {
+        const empty = document.createElement("div");
+        empty.classList.add("marker");
+
+        const middle = document.createElement("div");
+        middle.classList.add("middle");
+
+        const event = document.createElement("div");
+        event.classList.add("event");
+        event.addEventListener("click", (e) => {
+            e.preventDefault();
+            scrollTo(document.querySelector("#eventViewer"));
+        });
+
+
+        /* Hero section */
+        const hero = document.createElement("div");
+        hero.classList.add("hero");
+
+        const title = document.createElement("p");
+        title.classList.add("title");
+        title.textContent = data[key].Name;
+
+        const time = document.createElement("p");
+        time.classList.add("time");
+        time.textContent = `${data[key].StartTime} - ${data[key].EndTime}`;
+
+        hero.append(title, time);
+        /* End of Hero section */
+
+
+        /* Description section */
+        const description = document.createElement("p");
+        description.classList.add("description");
+        description.textContent = data[key].Description;
+        /* End of Description section */
+
+
+        eventCount++;
+        event.append(hero, description);
+
+        if (eventCount % 2) container.append(empty, middle, event);
+        else container.append(event, middle, empty);
+    }
+
+    console.log(eventCount);
+
 }
 
 function updateEventViewer(data) {
@@ -41,13 +93,11 @@ function updateEventViewer(data) {
 
 function checkImageExists(url, callback) {
     const img = new Image();
-    img.onload = function () {
-        console.log("noproblemo")
+    img.onload = () => {
         callback(true);
     };
-    img.onerror = function (e) {
+    img.onerror = (e) => {
         e.preventDefault();
-        console.log("problemo")
         callback(false);
     };
     img.src = url;
@@ -55,8 +105,6 @@ function checkImageExists(url, callback) {
 
 function addImagesToEventViewer(container, data) {
     for (const key in data) {
-        console.log(key, data[key])
-
         const imageUrl = `./assets/images/${data[key]}`;
 
         checkImageExists(imageUrl, (exists) => {
@@ -82,25 +130,7 @@ function scrollTo(target) {
     target.scrollIntoView({ behavior: "smooth" });
 }
 
-
-
-window.onload = () => {
-    document.querySelector("#footer .copyright .time").textContent = new Date().getFullYear();
-
-
-    getJSON("./assets/json/events.json", (data) => {
-        addEvents(data);
-    });
-
-    // ------------------------ \\
-    document.querySelectorAll(".event").forEach(el => {
-        el.addEventListener("click", (e) => {
-            e.preventDefault();
-            scrollTo(document.querySelector("#eventViewer"));
-        });
-    });
-    // ------------------------ \\
-
+function scrollToTopInit() {
     document.querySelectorAll(".button.scrollToTop").forEach(el => {
         el.addEventListener("click", (e) => {
             e.preventDefault();
@@ -108,10 +138,30 @@ window.onload = () => {
         });
     });
 
+
+    // Makes scroll to top button visible or invisible depending on scroll.
     const scrollToTopButton = document.querySelector("#scrollToTop");
     window.addEventListener("scroll", (e) => {
         e.preventDefault();
         if (window.scrollY >= 500) scrollToTopButton.classList.add("active");
         else scrollToTopButton.classList.remove("active");
     });
+}
+
+
+window.onload = () => {
+    document.querySelector("#footer .copyright .time").textContent = new Date().getFullYear();
+    scrollToTopInit();
+
+    getJSON("./assets/json/events.json", (data) => {
+        addEvents(data);
+    });
+
+    // // ---------------------- Temp ---------------------- \\
+    // document.querySelectorAll(".event").forEach(el => {
+    //     el.addEventListener("click", (e) => {
+    //         e.preventDefault();
+    //         scrollTo(document.querySelector("#eventViewer"));
+    //     });
+    // });
 }
