@@ -13,21 +13,18 @@
 
 <body>
     <div id="app">
-        <header class="navbar">
-            <div class="brand">
-                <a href="./">Tidslinje</a>
-            </div>
-            <nav class="links"></nav>
-        </header>
-
         <main id="main">
-
             <div class="hero wrapper">
-                <p class="title">Tidslinje</p>
-                <p>Trykk på kortene under for å se mer info om hendelsen.</p>
+                <p class="title">Samisk Tidslinje</p>
             </div>
 
             <div class="timeline wrapper noinline">
+                <div class="tipbox">
+                    <div class="content">
+                        <p>Trykk på kortene under for å se mer info om hendelsen.</p>
+                    </div>
+                </div>
+
                 <div class="container"></div>
             </div>
 
@@ -41,21 +38,20 @@
             </div>
 
             <div id="eventViewer" class="wrapper secondary">
-                <div class="container">
+                <div class="eventViewer__container">
 
-                    <div class="hero">
-                        <p class="title"></p>
-                        <p class="time"></p>
+                    <div class="eventViewer__container__hero">
+                        <p class="eventViewer__container__hero__title"></p>
+                        <p class="eventViewer__container__hero__time"></p>
                     </div>
 
-                    <div class="content">
-                        <p class="description"></p>
-                        <div class="images"></div>
+                    <div class="eventViewer__container__content">
+                        <p class="eventViewer__container__content__description"></p>
+                        <div class="eventViewer__container__content__images"></div>
                     </div>
 
                 </div>
             </div>
-
 
             <div class="seperator secondary upside">
                 <svg viewBox="0 0 960 100" width="960" height="100" xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +61,6 @@
                         fill="currentColor" stroke-linecap="round" stroke-linejoin="miter" />
                 </svg>
             </div>
-
         </main>
     </div>
 
@@ -73,9 +68,11 @@
         <div class="container">
             <p class="title">Samisk Tidslinje</p>
 
-            <p>
-                Koden bak nettsiden:
-                <a href="https://github.com/kimlukasmyrvold/timeline" target="_blank">GitHub</a>
+            <p class="description">
+                Denne nettsiden presenterer en tidslinje over viktige hendelser knyttet til samene i Norge.
+                Laget
+                som en del av en norsk oppgave, gir denne tidslinjen en oversikt over historiske øyeblikk og
+                utviklinger som har påvirket samenes kultur og erfaringer i landet.
             </p>
 
             <hr>
@@ -85,6 +82,11 @@
                 <a href="https://github.com/kimlukasmyrvold" target="_blank">Kim Lukas Myrvold</a>,
                 <a href="https://github.com/Lu69as" target="_blank">Lukas Okkenhaug</a> og
                 <a href="https://github.com/Lukaso6" target="_blank">Lukas Oliver Oliversen</a>.
+            </p>
+
+            <p class="codeBehind">
+                Se koden bak:
+                <a href="https://github.com/kimlukasmyrvold/timeline" target="_blank">GitHub</a>
             </p>
 
             <p class="copyright">Copyright &copy; <span class="time">2024</span></p>
