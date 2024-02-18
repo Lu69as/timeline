@@ -88,7 +88,7 @@ window.onload = () => {
     document.querySelector("#footer .copyright .time").textContent = new Date().getFullYear();
 
 
-    getJSON("/assets/json/events.json", (data) => {
+    getJSON("./assets/json/events.json", (data) => {
         addEvents(data);
     });
 
