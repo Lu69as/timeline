@@ -47,7 +47,7 @@ function addEvents(data) {
 
         const time = document.createElement("p");
         time.classList.add("time");
-        time.textContent = `${data[key].StartTime} - ${data[key].EndTime}`;
+        time.textContent = (data[key].StartTime === data[key].EndTime) ? data[key].StartTime : `${data[key].StartTime} - ${data[key].EndTime}`;
 
         hero.append(title, time);
         /* End of Hero section */
@@ -84,7 +84,7 @@ function updateEventViewer(data) {
     const images = eventViewer.querySelector(".eventViewer__container__content__images");
 
     title.textContent = data.Name;
-    time.textContent = `${data.StartTime} - ${data.EndTime}`;
+    time.textContent = (data.StartTime === data.EndTime) ? data.StartTime : `${data.StartTime} - ${data.EndTime}`;
     description.textContent = data.Description;
     addImagesToEventViewer(images, data.Images);
 }
@@ -157,12 +157,4 @@ window.onload = () => {
     getJSON("./assets/json/events.json", (data) => {
         addEvents(data);
     });
-
-    // // ---------------------- Temp ---------------------- \\
-    // document.querySelectorAll(".event").forEach(el => {
-    //     el.addEventListener("click", (e) => {
-    //         e.preventDefault();
-    //         scrollTo(document.querySelector("#eventViewer"));
-    //     });
-    // });
 }
