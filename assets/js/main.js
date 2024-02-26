@@ -139,7 +139,6 @@ function scrollToTopInit() {
         });
     });
 
-
     // Makes scroll to top button visible or invisible depending on scroll.
     const scrollToTopButton = document.querySelector("#scrollToTop");
     window.addEventListener("scroll", (e) => {
